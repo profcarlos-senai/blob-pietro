@@ -1,0 +1,18 @@
+2025-03-20 20:02:40.292124-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARQUIVO" not found (this database is empty); SQL statement:
+SELECT id, descricao, criado_em FROM arquivo [42104-232]
+2025-03-20 20:08:55.634539-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARQUIVO" not found (this database is empty); SQL statement:
+SELECT id, descricao, criado_em FROM arquivo [42104-232]
+2025-03-20 20:12:15.655340-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARQUIVO" not found (this database is empty); SQL statement:
+SELECT id, descricao, criado_em FROM arquivo [42104-232]
+2025-03-20 20:13:55.820966-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARQUIVO" not found (this database is empty); SQL statement:
+SELECT id, descricao, criado_em FROM arquivo [42104-232]
+2025-03-20 20:15:29.729718-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARQUIVO" not found; SQL statement:
+SELECT id, descricao, criado_em FROM arquivo [42102-232]
+2025-03-20 20:17:57.123122-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ARQUIVO" not found; SQL statement:
+SELECT id, descricao, criado_em FROM arquivo [42102-232]

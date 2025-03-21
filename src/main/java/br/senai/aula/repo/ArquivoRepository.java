@@ -12,6 +12,6 @@ public interface ArquivoRepository extends JpaRepository<Arquivo, Long> {
     @Query(value="SELECT id, descricao, criado_em FROM arquivos", nativeQuery = true)
     List<ArquivoDTO> findAllSemArquivo();
 
-    @Query(value="SELECT id, descricao, criado_em FROM arquivos where id=:id", nativeQuery = true)
+    @Query(value="SELECT id, nome_arquivo, descricao, criado_em FROM arquivos where id=:id", nativeQuery = true)
     ArquivoDTO findByIdSemArquivo(@Param("id") Long id);
 }

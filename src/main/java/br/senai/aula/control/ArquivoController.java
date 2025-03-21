@@ -27,6 +27,7 @@ public class ArquivoController {
                                                 @RequestParam("descricao") String descricao) {
         try {
             Arquivo arquivo = new Arquivo();
+            arquivo.setNomeArquivo(file.getOriginalFilename()); // lembra o nome original
             arquivo.setDescricao(descricao);
             arquivo.setDadosArquivo(file.getBytes());
 
@@ -42,8 +43,9 @@ public class ArquivoController {
     public ResponseEntity<byte[]> getDownloadArquivo(@PathVariable Long id) {
         Optional<Arquivo> arquivo = arquivoRepository.findById(id);
         if (arquivo.isPresent()) {
+            String nomeArquivo = arquivo.get().getNomeArquivo();
             return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=arquivo")
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\""+nomeArquivo+"\"")
                     .body(arquivo.get().getDadosArquivo());
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
